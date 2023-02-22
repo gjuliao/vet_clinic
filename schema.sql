@@ -17,3 +17,16 @@ CREATE TABLE animals (
         FOREIGN KEY (owners_id)
             REFERENCES owners (owners_id)
 );
+
+CREATE TABLE owners (
+id BIGSERIAL,
+full_name varchar(100),
+age int,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE species (
+id BIGSERIAL,
+name varchar(100),
+PRIMARY KEY (id)
+);
