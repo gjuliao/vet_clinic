@@ -7,5 +7,13 @@ CREATE TABLE animals (
     escape_attempts integer,
     neutered boolean,
     weight_kg decimal,
-    species varchar(100)
+    species_id integer,
+    owners_id integer,
+    PRIMARY KEY (id),
+    CONSTRAINT species_id
+        FOREIGN KEY (species_id)
+            REFERENCES species (species_id),
+    CONSTRAINT owners_id
+        FOREIGN KEY (owners_id)
+            REFERENCES owners (owners_id)
 );
