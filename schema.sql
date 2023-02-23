@@ -39,7 +39,7 @@ date_of_graduation DATE,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE specialties (
+CREATE TABLE specialization (
 id SERIAL,
 species_id INT,
 vets_id INT,
