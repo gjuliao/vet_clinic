@@ -51,17 +51,17 @@ SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1
 
 /* Part 3 */
 /* Animals belong to Melody Pond */
-SELECT animals.name FROM animals INNER JOIN owners ON (animals.owner_id = owners.full_name) WHERE owners.full_name = 'Melody Pond';
+SELECT animals.name FROM animals INNER JOIN owners ON (animals.owner_id = owners.id) WHERE owners.full_name = 'Melody Pond';
 /* List animals that are pokemon (their type is Pokemon). */
-SELECT animals.name FROM animals INNER JOIN species ON (animals.species_id = species.name) WHERE species.name = 'Pokemon';
+SELECT animals.name FROM animals INNER JOIN species ON (animals.species_id = species.id) WHERE species.name = 'Pokemon';
 /* List owners & animals even those who don't have animals*/
-SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON (owners.full_name = animals.owner_id);
+SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON (owners.id = animals.owner_id);
 /* Animals / species */
-SELECT species.name, COUNT(*) FROM species INNER JOIN animals ON (animals.species_id = species.name) GROUP BY species.name;
+SELECT species.name, COUNT(*) FROM species INNER JOIN animals ON (animals.species_id = species.id) GROUP BY species.name;
 /* Jennifer Orwell Digimonds */
-SELECT animals.name, species.name, owners.full_name FROM animals INNER JOIN species ON (animals.species_id = species.name) INNER JOIN owners ON (animals.owner_id = owners.full_name) WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
+SELECT animals.name, species.name, owners.full_name FROM animals INNER JOIN species ON (animals.species_id = species.id) INNER JOIN owners ON (animals.owner_id = owners.id) WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 /* Dean's animal without escape_attempts */
-SELECT animals.name, animals.escape_attempts, owners.full_name FROM animals INNER JOIN owners ON (animals.owner_id = owners.full_name) WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
+SELECT animals.name, animals.escape_attempts, owners.full_name FROM animals INNER JOIN owners ON (animals.owner_id = owners.id) WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
 /* Who owns the most animals? */
-SELECT owners.full_name, count (*) FROM animals INNER JOIN owners ON (animals.owner_id = owners.full_name) GROUP BY owners.full_name ORDER BY COUNT (*) DESC LIMIT 1;
+SELECT owners.full_name, count (*) FROM animals INNER JOIN owners ON (animals.owner_id = owners.id) GROUP BY owners.full_name ORDER BY COUNT (*) DESC LIMIT 1;
 
