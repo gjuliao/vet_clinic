@@ -30,3 +30,11 @@ id BIGSERIAL,
 name varchar(100),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE VETS (
+id SERIAL,
+name varchar(100),
+age INT,
+date_of_graduation DATE,
+PRIMARY KEY (id)
+);
