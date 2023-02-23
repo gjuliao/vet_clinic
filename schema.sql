@@ -31,10 +31,34 @@ name varchar(100),
 PRIMARY KEY (id)
 );
 
-CREATE TABLE VETS (
+CREATE TABLE vets (
 id SERIAL,
 name varchar(100),
 age INT,
 date_of_graduation DATE,
 PRIMARY KEY (id)
+);
+
+CREATE TABLE specialties (
+id SERIAL,
+species_id INT,
+vets_id INT,
+CONSTRAINT species_id
+    FOREIGN KEY (species_id)
+        REFERENCES species (id)
+CONSTRAINT vets_id
+    FOREIGN KEY (vets_id)
+        REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+id SERIAL,
+animals_id INT,
+vets_id INT,
+CONSTRAINT animals_id
+    FOREIGN KEY (animals_id)
+        REFERENCES animals(id)
+CONSTRAINT vets_id
+    FOREIGN KEY (vets_id)
+        REFERENCES vets(id)
 );
