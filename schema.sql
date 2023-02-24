@@ -53,12 +53,9 @@ CONSTRAINT vets_id
 
 CREATE TABLE visits (
 id SERIAL,
-animals_id INT,
+animals_id INT FOREIGN KEY (animals_id) REFERENCES vets(id),
 vets_id INT,
 date_of_visit DATE,
-CONSTRAINT animals_id
-    FOREIGN KEY (animals_id)
-        REFERENCES animals(id),
 CONSTRAINT vets_id
     FOREIGN KEY (vets_id)
         REFERENCES vets(id)
