@@ -63,12 +63,15 @@ Using postgres while applying primary and foreign keys using one-to-many relatio
 
 ## 👥 Authors <a name="authors"></a>
 
- Author: Giovanni Juliao
+ Author 1: Giovanni Juliao
+ Author 2: Ricardo Martinez
+ 
 
-👤 **Author Social Network**
+👤 **Authors Github accounts**
 
-- GitHub: [@gjuliao](https://github.com/gjuliao)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/giovannijuliao)
+- GitHub Giuovanni: [@gjuliao](https://github.com/gjuliao)
+- GitHub Ricardo: [@rmrmrmr](https://github.com/rmrmrmr)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +106,5 @@ I would like to thank the Microverse team for arranging the project.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./license) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
