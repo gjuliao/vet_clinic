@@ -60,3 +60,12 @@ CONSTRAINT vets_id
     FOREIGN KEY (vets_id)
         REFERENCES vets(id)
 );
+
+/* Create index for animals_id on visits table*/
+CREATE INDEX animals_id_desc ON visits(animals_id DESC);
+
+/* Create index for vets_id on visits table */
+CREATE INDEX vets_id_desc ON visits(vets_id DESC);
+
+/* Create index for emails_desc on owners table */
+CREATE INDEX email_desc ON owners(email DESC);
